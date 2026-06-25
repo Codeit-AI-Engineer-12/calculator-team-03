@@ -1,6 +1,6 @@
 def differentiator(f, x, h=1e-7):
     """
-    수치 미부분을 계산하는 함수입니다.
+    수치 미분을 계산하는 함수입니다.
     Args:
         f (function): 미분할 함수
         x (float): 미분을 계산할 점
