@@ -1,4 +1,4 @@
-from ops.parser import parse_natural_numbers
+from utils.parser import parse_natural_numbers
 
 
 def multiply(a: int, b: int) -> int | None:
