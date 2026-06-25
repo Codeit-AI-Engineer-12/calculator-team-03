@@ -16,4 +16,6 @@ def root(a=None, b=None):
         ValueError: 입력이 없거나, 자연수가 아니면 발생합니다.
     """
     a, b = parse_natural_numbers(a, b)
+    if b == 0:
+        raise ValueError("지수는 0이 될 수 없습니다.")
     return a ** (1 / b)
