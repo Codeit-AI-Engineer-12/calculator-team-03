@@ -8,6 +8,8 @@ from ops.mod import mod
 from ops.multiply import multiply
 from ops.power import power
 from ops.subtract import subtract
+from ops.max import max
+
 
 operations = {
     "+": add,
@@ -21,4 +23,5 @@ operations = {
     "--": decrease,
     "log": log,
     "diff": differentiator,
+    "max": max
 }
