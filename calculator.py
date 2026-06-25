@@ -1,4 +1,5 @@
 from ops.add import add
+from ops.differentiator import differentiator
 from ops.divide import divide
 from ops.ido import decrease, increase
 from ops.int_divide import int_divide
@@ -19,4 +20,5 @@ operations = {
     "++": increase,
     "--": decrease,
     "log": log,
+    "diff": differentiator,
 }
