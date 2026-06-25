@@ -9,7 +9,7 @@ def differentiator(f, x, h=1e-7):
         float: f의 x에서의 근사 미분값
     Raises:
         ValueError: x가 숫자가 아니거나, boolean인 경우 발생합니다.
-    useage:
+    usage:
         >>> differentiator(f = lambda x: x**2, 3)
         6.000000000838668
     """
