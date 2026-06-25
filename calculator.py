@@ -1,4 +1,5 @@
 from ops.add import add
+from ops.avg import avg
 from ops.differentiator import differentiator
 from ops.divide import divide
 from ops.ido import decrease, increase
@@ -7,6 +8,7 @@ from ops.log import log
 from ops.mod import mod
 from ops.multiply import multiply
 from ops.power import power
+from ops.root import root
 from ops.subtract import subtract
 
 operations = {
@@ -21,4 +23,7 @@ operations = {
     "--": decrease,
     "log": log,
     "diff": differentiator,
+    "root": root,
+    "avg": avg,
+    "min": min,
 }
