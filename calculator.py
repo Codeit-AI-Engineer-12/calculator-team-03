@@ -1,16 +1,16 @@
 from ops.add import add
+from ops.combination import combination
 from ops.differentiator import differentiator
 from ops.divide import divide
+from ops.factorial import factorial
 from ops.ido import decrease, increase
 from ops.int_divide import int_divide
 from ops.log import log
+from ops.max import max
 from ops.mod import mod
 from ops.multiply import multiply
 from ops.power import power
 from ops.subtract import subtract
-from ops.max import max
-from ops.factorial import factorial
-
 
 operations = {
     "+": add,
@@ -25,5 +25,6 @@ operations = {
     "log": log,
     "diff": differentiator,
     "max": max,
-    "factorial": factorial
+    "factorial": factorial,
+    "combination": combination,
 }
