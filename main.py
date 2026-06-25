@@ -39,10 +39,21 @@ def main():
                 a, b = parse_natural_numbers(int(a), int(b))
                 if op not in operations:
                     print(f"아.. '{op}'는 연산이 안되는데..")
-                print(
-                    "\n\t===\t", user_input["expr"], "=", operations[op](a, b), "\n\n"
-                )
-        
+                if operations[op] == "++" or operations[op] == "--":
+                    print(
+                        "\n\t===\t", user_input["expr"], "=", operations[op](a), "\n\n"
+                    )
+                else:
+                    print(
+                        "\n\t===\t",
+                        user_input["expr"],
+                        "=",
+                        operations[op](a, b),
+                        "\n\n",
+                    )
+
+        elif user_input["choice"] == 2:
+            print("1차 방정식의 기울기를 구할 수 있습니다.")
 
     print("=" * 50)
     print("계산기가 종료됐습니다.")
