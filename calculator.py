@@ -6,6 +6,7 @@ from ops.mod import mod
 from ops.multiply import multiply
 from ops.power import power
 from ops.subtract import subtract
+from ops.log import log
 
 operations = {
     "+": add,
@@ -17,4 +18,5 @@ operations = {
     "avg": avg,
     "++": increase,
     "--": decrease,
+    "log": log
 }
