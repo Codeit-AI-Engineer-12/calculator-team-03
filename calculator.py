@@ -1,7 +1,7 @@
 from ops.add import add
-from ops.avg import avg
 from ops.divide import divide
 from ops.ido import decrease, increase
+from ops.int_divide import int_divide
 from ops.mod import mod
 from ops.multiply import multiply
 from ops.power import power
@@ -14,8 +14,8 @@ operations = {
     "*": multiply,
     "-": subtract,
     "/": divide,
+    "//": int_divide,
     "**": power,
-    "avg": avg,
     "++": increase,
     "--": decrease,
     "log": log
