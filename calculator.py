@@ -6,7 +6,8 @@ from ops.factorial import factorial
 from ops.ido import decrease, increase
 from ops.int_divide import int_divide
 from ops.log import log
-from ops.max import max
+from ops.max import max_num
+from ops.min import min_num
 from ops.mod import mod
 from ops.multiply import multiply
 from ops.permutation import permutation
@@ -25,6 +26,11 @@ operations = {
     "--": decrease,
     "log": log,
     "diff": differentiator,
+    "max": max_num,
+    "min": min_num,
+    "!": factorial,
+    "inc": increase,
+    "dec": decrease,
     "max": max,
     "factorial": factorial,
     "combination": combination,

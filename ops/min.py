@@ -1,7 +1,7 @@
 from utils.parser import parse_natural_numbers
 
 
-def min(a: int, b: int) -> int:
+def min_num(a: int, b: int) -> int:
     """두 수 중 더 적은 값을 반환
 
     Args:
