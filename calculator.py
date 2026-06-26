@@ -1,4 +1,5 @@
 from ops.add import add
+from ops.combination import combination
 from ops.differentiator import differentiator
 from ops.divide import divide
 from ops.factorial import factorial
@@ -9,6 +10,7 @@ from ops.max import max_num
 from ops.min import min_num
 from ops.mod import mod
 from ops.multiply import multiply
+from ops.permutation import permutation
 from ops.power import power
 from ops.subtract import subtract
 
@@ -27,7 +29,10 @@ operations = {
     "max": max_num,
     "min": min_num,
     "!": factorial,
-    "factorial": factorial,
     "inc": increase,
     "dec": decrease,
+    "max": max,
+    "factorial": factorial,
+    "combination": combination,
+    "permutation": permutation,
 }
