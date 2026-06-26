@@ -20,7 +20,7 @@
 | 팩토리얼(자연수)    | factorial      | 10!, factorial(10) | 1부터 n까지의 곱을 반환함                           | 자연수만 가능           |
 |조합(자연수)|combination|combination(5, 2) = 5C2|n개의 항목 중 r개를 선택하는 조합을 반환함|n>=0, r>=0, n>=r|
 |순열(자연수)|permutation|permutation(5, 2) = 5P2|n개의 항목 중 r개를 선택하는 순열을 반환함|n>=0, r>=0, n>=r|
-|중복순열(자연수)|permutation_with_Repetition|개의 항목 중 r개를 선택하는 순열(중복 허용)을 반환함|n>=0, r>=0|
+|중복순열(자연수)|permutation_with_Repetition|permutation_with_Repetition(5, 2) = 5$_n\Pi_r$2|개의 항목 중 r개를 선택하는 순열(중복 허용)을 반환함|n>=0, r>=0|
 
 ### main.py
 
