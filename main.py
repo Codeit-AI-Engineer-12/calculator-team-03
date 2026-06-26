@@ -32,16 +32,30 @@ def parse_input(expr_str, mode):
         # 기존 사칙연산 파싱: [숫자][연산기호][숫자]
         tokens = re.findall(r"\d+\.\d+|\d+|[\+\-\*/%]+|\*\*", expr_str)
         if len(tokens) == 3:
-            return tokens[1], [float(tokens[0]), float(tokens[2])]
+            return tokens[1], [int(tokens[0]), int(tokens[2])]
 
     elif mode == "function":
-        # Case 1: 후위 표기 기호 감지 (예: 10!)
+        # Case 1: 팩토리얼 후위 표기 감지 (예: 10!)
         if expr_str.endswith("!"):
-            num_str = expr_str[:-1]  # '!' 제외한 숫자 추출
+            num_str = expr_str[:-1]
             if num_str.isdigit():
                 return "factorial", [int(num_str)]
 
-        # Case 2: 표준 함수형 감지 (예: max(10,20), factorial(5))
+        # Case 2: 증감 연산자 후위 표기 감지 (예: 10++, 10--)
+        if expr_str.endswith("++") or expr_str.endswith("--"):
+            op = "inc" if expr_str.endswith("++") else "dec"
+            num_str = expr_str[:-2]
+            if num_str.replace(".", "", 1).isdigit():  # 소수점 대응
+                return op, [int(num_str)]
+
+        # Case 3: 증감 연산자 전위 표기 감지 (예: ++10, --10)
+        if expr_str.startswith("++") or expr_str.startswith("--"):
+            op = "inc" if expr_str.startswith("++") else "dec"
+            num_str = expr_str[2:]
+            if num_str.replace(".", "", 1).isdigit():
+                return op, [int(num_str)]
+
+        # Case 4: 표준 함수형 감지 (예: max(10,20), inc(5), factorial(5))
         match = re.match(r"([a-zA-Z_][a-zA-Z0-9_]*)\((.*)\)", expr_str)
         if match:
             func_name = match.group(1)

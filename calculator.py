@@ -31,7 +31,6 @@ operations = {
     "!": factorial,
     "inc": increase,
     "dec": decrease,
-    "max": max,
     "factorial": factorial,
     "combination": combination,
     "permutation": permutation,
