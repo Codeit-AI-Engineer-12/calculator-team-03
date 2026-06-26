@@ -8,7 +8,7 @@ MENU_CONFIG = {
         "title": "산술 연산",
         "desc": "덧셈(+), 뺄셈(-), 곱셈(*), 나눗셈(/), 나머지(%), 거듭제곱(**) 등을 계산합니다.",
         "example": "2 + 3  또는  5 ** 2",
-        "type": "binary",  # 피연산자 2개 필요
+        "type": "symbol",  # 피연산자 2개 필요
     },
     2: {
         "title": "방정식 (미분/기울기)",
@@ -30,7 +30,7 @@ def parse_input(expr_str, mode):
 
     if mode == "symbol":
         # 기존 사칙연산 파싱: [숫자][연산기호][숫자]
-        tokens = re.findall(r"\d+\.\d+|\d+|[\+\-\*/%]+|\*\*", expr_str)
+        tokens = re.findall(r"\d+\.\d+|\d+|\*\*|[\+\-\*/%]+", expr_str)
         if len(tokens) == 3:
             return tokens[1], [int(tokens[0]), int(tokens[2])]
 

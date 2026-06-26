@@ -1,0 +1,13 @@
+__pycache__/
+.prettierignore
+.python-version
+pyproject.toml
+.venv/
+uv.lock
+
+data/
+*.csv
+models/
+*.pt
+*.pth
+.ipynb_checkpoints/
