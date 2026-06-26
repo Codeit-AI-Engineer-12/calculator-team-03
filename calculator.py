@@ -1,5 +1,6 @@
 from ops.add import add
 from ops.combination import combination
+from ops.Combination_with_Repetition import combination_with_repetition
 from ops.differentiator import differentiator
 from ops.divide import divide
 from ops.factorial import factorial
@@ -31,8 +32,8 @@ operations = {
     "!": factorial,
     "inc": increase,
     "dec": decrease,
-    "max": max,
     "factorial": factorial,
     "combination": combination,
     "permutation": permutation,
+    "combination_with_repetition": combination_with_repetition,
 }
